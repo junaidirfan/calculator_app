@@ -35,5 +35,7 @@ def index():
         result = calculate(num1, num2, operation)
     return render_template("index.html", result=result)
 
+# if __name__ == "__main__":
+#     app.run(debug=True)
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0")
