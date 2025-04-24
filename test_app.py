@@ -28,7 +28,7 @@ class TestFlaskApp(unittest.TestCase):
 
     def test_division(self):
         """Test division operation via POST"""
-        response = self.app.post("/", data={"num1": "10", "num2": "5", "operation": "divide"})
+        response = self.app.post("/", data={"num1": "10", "num2": "0", "operation": "divide"})
         self.assertIn(b"2", response.data)
 
     def test_divide_by_zero(self):
@@ -38,3 +38,4 @@ class TestFlaskApp(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
